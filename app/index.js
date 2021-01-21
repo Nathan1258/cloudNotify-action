@@ -22,18 +22,13 @@ if (!process.env.USERID) {
 }
 
 console.log("Sending message");
-console.log(
-  API_URL +
-    ("userID=%s&token=%s&title=%s&body=%s" %
-      (process.env.CLOUD_NOTIFY_API_TOKEN,
-      process.env.CLOUD_NOTIFY_USERID_KEY,
-      message.title,
-      message.body))
-);
+
+const newURL = `${API_URL}userID=${USERID}&token=${TOKEN}&title=${message.title}&body=${message.body}`;
+console.log(newURL);
 
 request(
   {
-    url: `${API_URL}userID=${CLOUD_NOTIFY_USERID_KEY}&token=${CLOUD_NOTIFY_API_TOKEN}&title=${message.title}&body=${message.body}`,
+    url: newURL,
     method: "GET",
   },
   (err, response) => {
