@@ -13,12 +13,12 @@ const message = {
     `GitHub Notification from ${process.env.GITHUB_REPOSITORY}`,
 };
 
-if (!process.env.CLOUD_NOTIFY_API_KEY) {
-  return console.error("API KEY is missing");
+if (!process.env.TOKEN) {
+  return console.error("CLOUD_NOTIFY_API_TOKEN is missing");
 }
 
-if (!process.env.CLOUD_NOTIFY_USERID) {
-  return console.error("USERID KEY is missing");
+if (!process.env.USERID) {
+  return console.error("CLOUD_NOTIFY_USERID_KEY is missing");
 }
 
 console.log("Sending message", JSON.stringify(message));
@@ -28,8 +28,8 @@ request(
     url:
       API_URL +
       ("userID=%s&token=%s&title=%s&body=%s" %
-        (process.env.CLOUD_NOTIFY_API_KEY,
-        process.env.CLOUD_NOTIFY_USERID,
+        (process.env.CLOUD_NOTIFY_API_TOKEN,
+        process.env.CLOUD_NOTIFY_USERID_KEY,
         message.title,
         message.body)),
     method: "GET",
