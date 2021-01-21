@@ -23,7 +23,7 @@ To run this action you'll need:
   uses: nathan1258/cloudNotify-action@master
 ```
 
-3. Add a new secret `CLOUD_NOTIFY_API_TOKEN` and `CLOUD_NOTIFY_USERID_KEY` (both found in the app).
+3. Add a new secret `CLOUD_NOTIFY_API_TOKEN` and `CLOUD_NOTIFY_USERID_KEY` (both found in the app) inside your repo's settings.
 4. Commit your update .yml file.
 
 ## Example Workflow
