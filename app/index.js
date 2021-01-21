@@ -21,7 +21,15 @@ if (!process.env.USERID) {
   return console.error("CLOUD_NOTIFY_USERID_KEY is missing");
 }
 
-console.log("Sending message", JSON.stringify(message));
+console.log("Sending message");
+console.log(
+  API_URL +
+    ("userID=%s&token=%s&title=%s&body=%s" %
+      (process.env.CLOUD_NOTIFY_API_TOKEN,
+      process.env.CLOUD_NOTIFY_USERID_KEY,
+      message.title,
+      message.body))
+);
 
 request(
   {
@@ -38,6 +46,6 @@ request(
     if (err) {
       return console.error(err.toString());
     }
-    console.log("Notification sent!", response.body);
+    console.log("Notification sent! Response from server: ", response.body);
   }
 );
