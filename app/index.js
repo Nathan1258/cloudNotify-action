@@ -33,13 +33,7 @@ console.log(
 
 request(
   {
-    url:
-      API_URL +
-      ("userID=%s&token=%s&title=%s&body=%s" %
-        (process.env.CLOUD_NOTIFY_API_TOKEN,
-        process.env.CLOUD_NOTIFY_USERID_KEY,
-        message.title,
-        message.body)),
+    url: `${API_URL}userID=${CLOUD_NOTIFY_USERID_KEY}&token=${CLOUD_NOTIFY_API_TOKEN}&title=${message.title}&body=${message.body}`,
     method: "GET",
   },
   (err, response) => {
