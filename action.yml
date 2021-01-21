@@ -3,7 +3,7 @@ description: "Receive push notifications on your iOS device via this GitHub acti
 author: "Ellisn"
 branding:
   icon: "send"
-  color: "red"
+  color: "purple"
 runs:
   using: "docker"
   image: "Dockerfile"
