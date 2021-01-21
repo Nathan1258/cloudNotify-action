@@ -23,7 +23,7 @@ if (!process.env.USERID) {
 
 console.log("Sending message");
 
-const newURL = `${API_URL}userID=${USERID}&token=${TOKEN}&title=${message.title}&body=${message.body}`;
+const newURL = `${API_URL}userID=${process.env.USERID}&token=${proces.env.TOKEN}&title=${message.title}&body=${message.body}`;
 console.log(newURL);
 
 request(
