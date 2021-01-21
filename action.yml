@@ -1,0 +1,9 @@
+name: "Cloud Notify - Send push notifications to your devices"
+description: "Receive push notifications on your iOS device via this GitHub action to notify you of the progress of your builds."
+author: "Ellisn"
+branding:
+  icon: "send"
+  color: "red"
+runs:
+  using: "docker"
+  image: "Dockerfile"
