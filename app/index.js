@@ -24,7 +24,7 @@ if (!process.env.USERID) {
 console.log("Sending message");
 
 const newURLString = `${API_URL}userID=${process.env.USERID}&token=${process.env.TOKEN}&title=${message.title}&body=${message.body}`;
-const newURL = newURLString.replace(/ /g, "%20");
+const newURL = newURLString.replace(/ /g, "%20").trim();
 console.log(newURL);
 
 request(
