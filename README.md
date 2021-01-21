@@ -26,7 +26,9 @@ To run this action you'll need:
 3. Add a new secret `CLOUD_NOTIFY_API_TOKEN` and `CLOUD_NOTIFY_USERID_KEY` (both found in the app) inside your repo's settings.
 4. Commit your update .yml file.
 
-## Example Workflow
+## Example Workflows
+
+### You can send a notification on every commit
 
 ```yaml
 name: Notify on every commit
@@ -45,6 +47,20 @@ jobs:
           USERID: ${{ secrets.CLOUD_NOTIFY_USERID_KEY }}
           TITLE: `New GitHub commit on ${process.env.GITHUB_REPOSITORY} 🎉`
           MESSAGE: "There is a new commit!"
+```
+
+### Or, simply use this section of code anywhere in the workflow file to update you on particular steps.
+
+The code below was pasted at the bottom of a workflow file to notify me when the build completes
+
+```yaml
+- name: Build finished notification
+        uses: nathan1258/cloudNotify-action@master
+        env:
+          TOKEN: ${{ secrets.CLOUD_NOTIFY_API_TOKEN }}
+          USERID: ${{ secrets.CLOUD_NOTIFY_USERID_KEY }}
+          TITLE: "BUILD HAS FINISHED 🎉"
+          MESSAGE: "THE BUILD HAS FINISHED"
 ```
 
 ## TODO
