@@ -4,7 +4,11 @@ Receive push notifications on your iOS device via this GitHub action to notify y
 This runs sequentially, as a result, place the below code anywhere in your workflow where you'd like to get notified of an particular event.
 A popular example of this would be to place the code below at the end of your Workflow file do you can get notified upon build completion.
 You can also use this to get notified of any errors in your build throughout your workflow (which will require you to place this code more than once around the workflow).
-This is currently only iOS supported.
+
+You will need our app installed on the deivce you want to receive notifications on.
+
+- iOS: On the App Store next week
+- Android: Currently in development
 
 ## Pre-requisites
 
