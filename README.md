@@ -7,7 +7,7 @@ You can also use this to get notified of any errors in your build throughout you
 
 You will need our app installed on the deivce you want to receive notifications on.
 
-- iOS: https://apps.apple.com/gb/app/cloud-notify/id1549955568
+- iOS: [Can be found here](https://apps.apple.com/gb/app/cloud-notify/id1549955568)
 - Android: Currently in development
 
 ## Pre-requisites
