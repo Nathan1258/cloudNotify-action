@@ -21,13 +21,8 @@ if (!process.env.USERID) {
   return console.error("CLOUD_NOTIFY_USERID_KEY is missing");
 }
 
-console.log("Sending message");
-console.log(process.env.TOKEN);
-console.log(process.env.USERID);
-
 const newURLString = `${API_URL}userID=${process.env.USERID}&token=${process.env.TOKEN}&title=${message.title}&body=${message.body}`;
 const newURL = encodeURI(newURLString.trim());
-console.log(newURL);
 
 request(
   {
