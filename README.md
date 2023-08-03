@@ -49,7 +49,7 @@ jobs:
         env:
           TOKEN: ${{ secrets.CLOUD_NOTIFY_API_TOKEN }}
           USERID: ${{ secrets.CLOUD_NOTIFY_USERID_KEY }}
-          TITLE: "New GitHub commit on ${{ env.GITHUB_REPOSITORY }} 🎉"
+          TITLE: "New GitHub commit on ${{ github.repository }} 🎉"
           MESSAGE: "There is a new commit!"
 ```
 
