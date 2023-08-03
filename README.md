@@ -42,7 +42,6 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - name: Cloud Notify push notification
         uses: nathan1258/cloudNotify-action@master
@@ -51,6 +50,7 @@ jobs:
           USERID: ${{ secrets.CLOUD_NOTIFY_USERID_KEY }}
           TITLE: "New GitHub commit on ${{ github.repository }} 🎉"
           MESSAGE: "There is a new commit!"
+          LINK: "https://ellisn.com/"
 ```
 
 ### Or, simply use this section of code anywhere in the workflow file to update you on particular steps.
