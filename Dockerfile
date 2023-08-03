@@ -4,7 +4,7 @@ COPY ./app /app
 
 # RUN chmod +x /app/entrypoint.sh
 
-ENTRYPOINT [ "bash", "-c", "/app/entrypoint.sh" ]
+ENTRYPOINT [ "bash", "-c", "./app/entrypoint.sh" ]
 # ENTRYPOINT ["/app/entrypoint.sh"]
 
 LABEL "com.github.actions.name"="Cloud Notify - Send push notifications to your devices"
